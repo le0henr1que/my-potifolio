@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" type="text/css" href="css/css.css"/>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="js/main.js"></script>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portifolio</title>
+  <style>
+    *{
+      overflow: hidden;
+    }
+  </style>
+ 
+</head>
+<body class="gradient">
+  
+  <p class="text" >ESCOLHA UM AVATAR PARA EXPLORAR</p>
+
+  <div class="avatar-imh">
+    <img class="avatar" id="av1" src="img/monkey1.png" >
+    <img class="avatar" id="av2" src="img/monkey2.png" >
+    <img class="avatar" id="av3" src="img/monkey3.png" >
+    <img class="avatar" id="av4" src="img/monkey4.png" >
+    <img class="avatar" id="av5" src="img/monkey5.png" >
+  </div>
+
+
+  
+  <div id="fundo">
+    <div class="avatar-imh" style="margin-top:200px;">
+      <img class="avatar avSelect" id="av1selecionado" style="display: none;" src="img/monkey1.png" >
+      <img class="avatar avSelect" id="av2selecionado" style="display: none;" src="img/monkey2.png" >
+      <img class="avatar avSelect" id="av3selecionado" style="display: none;" src="img/monkey3.png" >
+      <img class="avatar avSelect" id="av4selecionado" style="display: none;" src="img/monkey4.png" >
+      <img class="avatar avSelect" id="av5selecionado" style="display: none;" src="img/monkey5.png" >
+    </div>
+    <div class="color">
+      <div id="triangulo-para-cima" ></div>
+      <div class="cor cor1 " id="6C50FA" style="background: #6C50FA;"></div>
+      <div class="cor cor2 " id="F6BF45" style="background: #F6BF45;"></div>
+      <div class="cor cor3 " id="002642" style="background: #002642;"></div>
+      <div class="cor cor4 " id="4BDBD5" style="background: #4BDBD5;"></div>
+      <div class="cor cor5 " id="FF6E1A"  style="background: #FF6E1A;"></div>
+      <div class="nome">
+        <p style="font-family: sans-serif; color:rgb(82, 80, 80); font-weight: 700;">Seu Nome</p>
+        <input class="txt" type="text">
+      </div>
+      <div class="nb" style="margin: 10px;">
+        <p style="float:right; cursor:pointer;" id="next">Next</p>
+        <p style="float:left; cursor:pointer;" id="back">Back</p>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
+
+
+    
