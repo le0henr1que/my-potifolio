@@ -91,7 +91,6 @@
   font-family: sans-serif;
   color:rgb(61, 61, 61);
   font-weight: bolder;
-  border-top:1px solid rgba(141, 141, 141, 0.699);
 }
 .nome{
   display: none;
@@ -659,6 +658,65 @@
     0% { width: 0; }
     100% { width: 50%; }
   }
+  .progress-value10 {
+    animation: git 3s normal forwards;
+    box-shadow: 0 5px 20px -5px rgb(208, 255, 0);
+    border-radius: 100px;
+    background: rgb(208, 255, 1);
+    height: 15px;
+    width: 0;
+    
+  }
+  
+  @keyframes git {
+    0% { width: 0; }
+    100% { width: 50%; }
+  }
+  .progress-value11 {
+    animation: html 3s normal forwards;
+    box-shadow: 0 5px 20px -5px rgb(208, 255, 0);
+    border-radius: 100px;
+    background: rgb(208, 255, 1);
+    height: 15px;
+    width: 0;
+    
+  }
+  
+  @keyframes html {
+    0% { width: 0; }
+    100% { width: 90%; }
+  }
+
+  .progress-value12 {
+    animation: arduino 3s normal forwards;
+    box-shadow: 0 5px 20px -5px rgb(208, 255, 0);
+    border-radius: 100px;
+    background: rgb(208, 255, 1);
+    height: 15px;
+    width: 0;
+    
+  }
+  
+  @keyframes arduino {
+    0% { width: 0; }
+    100% { width: 30%; }
+  }
+  .progress-value13 {
+    animation: c 3s normal forwards;
+    box-shadow: 0 5px 20px -5px rgb(208, 255, 0);
+    border-radius: 100px;
+    background: rgb(208, 255, 1);
+    height: 15px;
+    width: 0;
+    
+  }
+  
+  @keyframes c {
+    0% { width: 0; }
+    100% { width: 23%; }
+  }
+
+
 
   .quantidade{
       width: 470px;
@@ -678,7 +736,7 @@
   .baner-lateral{
       width: 220px;
       height: 250px;
-      background: rgba(255, 255, 255, 0.685);
+      background: #ffffff;
       position: fixed;
       margin-top:200px;
       margin-left: -170px;
@@ -736,4 +794,11 @@
 .hidden{
   display: flex !important;
 }
+#makeMovie{
+  width: 100%;
+}
+.color{
+  width: 100%;
+}
+
  }

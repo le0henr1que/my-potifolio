@@ -6,7 +6,7 @@ var color = sessionStorage.getItem("color")
 $("#av1").attr("src", avatar).css("background", "#"+color)
 $(".visitor").text(nome)
 $("#fundo").fadeOut("1000")
-$(".baner-lateral").animate({left: '10%'});
+$(".baner-lateral").animate({left: '160'});
 
 }, 1000);
 setTimeout(function() {
@@ -36,8 +36,9 @@ abilit("#q1", ".img4", "React Native")
 abilit("#q1", ".img5", "Mysql")
 
 $(document).ready(function(){
+
     $(".baner-lateral").mouseover(function(){
-      $(".baner-lateral").animate({left: '10%'});
+      $(".baner-lateral").animate({left: '160px'});
       setTimeout(function() {
 
         $(".baner-lateral").animate({left: '0px'});
@@ -96,6 +97,10 @@ $(document).ready(function(){
 
     })
   }
+  $(document).on("click", "#fundo2", function(){
+    $("#fundo2").fadeOut("1000")
+
+  })
   getMovieo("#openMovie1", "https://www.youtube.com/embed/kdfCEBjClDs")
   getMovieo("#openMovie2", "https://www.youtube.com/embed/BhMcBkmxUfY")
   getMovieo("#openMovie3", "https://www.youtube.com/embed/aSfDYzWaSvk")
