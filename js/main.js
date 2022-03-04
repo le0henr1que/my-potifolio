@@ -39,8 +39,7 @@ click++
 
     if(click == 2){
         sessionStorage.setItem('nomeInd',  $(".txt").val())
-        // window.location.href = "https://gracious-roentgen-4c8d9c.netlify.app/page.html";
-        window.location.href = "file:///C:/Users/leona/Desktop/Portifolio/Port/page.html";
+        window.location.href = "https://gracious-roentgen-4c8d9c.netlify.app/page.html";
     }
 
 
