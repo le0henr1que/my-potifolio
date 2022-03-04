@@ -72,8 +72,7 @@ $(document).ready(function(){
       $("#projects").animate({height: '70%'});
       $("#verProje").text("Ver Menos")
       $("#newProj1").fadeIn("1000")
-      $("#newProj2").fadeIn("1000")
-      $("#newProj3").fadeIn("1000")
+  
 
     
       if(ver == 2){
@@ -81,8 +80,7 @@ $(document).ready(function(){
         $("#projects").animate({marginTop: '20px'}).animate({height: '44%'});
         $("#verProje").text("Ver Todos")
         $("#newProj1").fadeOut("1000")
-        $("#newProj2").fadeOut("1000")
-        $("#newProj3").fadeOut("1000")
+       
 
 
 

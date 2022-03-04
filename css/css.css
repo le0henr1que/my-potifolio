@@ -511,14 +511,14 @@
     position: absolute;
     display: flex;
     height: 20px;
-    width: 50%;
+    width: 200px;
     margin-top: 30px;
     margin-left: 10px;
     
   }
   
   .progress-value {
-    animation: load 3s normal forwards;
+    animation: JS 3s normal forwards;
     box-shadow: 0 5px 20px -5px rgb(208, 255, 0);
     border-radius: 100px;
     background: rgb(208, 255, 1);
@@ -526,12 +526,27 @@
     width: 0;
     
   }
-  @keyframes load {
+  @keyframes JS {
     0% { width: 0; }
-    100% { width: 50%; }
+    100% { width: 60%; }
   }
-  .progress-value3 {
-    animation: load3 3s normal forwards;
+
+  .progress-value1 {
+    animation: php 3s normal forwards;
+    box-shadow: 0 5px 20px -5px rgb(208, 255, 0);
+    border-radius: 100px;
+    background: rgb(208, 255, 1);
+    height: 15px;
+    width: 0;
+    
+  }
+  @keyframes php {
+    0% { width: 0; }
+    100% { width: 70%; }
+  }
+
+  .progress-value2 {
+    animation: node 3s normal forwards;
     box-shadow: 0 5px 20px -5px rgb(208, 255, 0);
     border-radius: 100px;
     background: rgb(208, 255, 1);
@@ -540,10 +555,111 @@
     
   }
   
-  @keyframes load3 {
+  @keyframes node {
     0% { width: 0; }
-    100% { width: 60%; }
+    100% { width: 30%; }
   }
+  .progress-value3 {
+    animation: React 3s normal forwards;
+    box-shadow: 0 5px 20px -5px rgb(208, 255, 0);
+    border-radius: 100px;
+    background: rgb(208, 255, 1);
+    height: 15px;
+    width: 0;
+    
+  }
+  
+  @keyframes React {
+    0% { width: 0; }
+    100% { width: 40%; }
+  }
+  .progress-value4 {
+    animation: boots 3s normal forwards;
+    box-shadow: 0 5px 20px -5px rgb(208, 255, 0);
+    border-radius: 100px;
+    background: rgb(208, 255, 1);
+    height: 15px;
+    width: 0;
+    
+  }
+  
+  @keyframes boots {
+    0% { width: 0; }
+    100% { width: 75%; }
+  }
+
+  .progress-value5 {
+    animation: hack 3s normal forwards;
+    box-shadow: 0 5px 20px -5px rgb(208, 255, 0);
+    border-radius: 100px;
+    background: rgb(208, 255, 1);
+    height: 15px;
+    width: 0;
+    
+  }
+  
+  @keyframes hack {
+    0% { width: 0; }
+    100% { width: 45%; }
+  }
+  .progress-value6 {
+    animation: oracle 3s normal forwards;
+    box-shadow: 0 5px 20px -5px rgb(208, 255, 0);
+    border-radius: 100px;
+    background: rgb(208, 255, 1);
+    height: 15px;
+    width: 0;
+    
+  }
+  
+  @keyframes oracle {
+    0% { width: 0; }
+    100% { width: 35%; }
+  }
+
+  .progress-value7 {
+    animation: mysq 3s normal forwards;
+    box-shadow: 0 5px 20px -5px rgb(208, 255, 0);
+    border-radius: 100px;
+    background: rgb(208, 255, 1);
+    height: 15px;
+    width: 0;
+    
+  }
+  
+  @keyframes mysq {
+    0% { width: 0; }
+    100% { width: 55%; }
+  }
+  .progress-value8 {
+    animation: json 3s normal forwards;
+    box-shadow: 0 5px 20px -5px rgb(208, 255, 0);
+    border-radius: 100px;
+    background: rgb(208, 255, 1);
+    height: 15px;
+    width: 0;
+    
+  }
+  
+  @keyframes json {
+    0% { width: 0; }
+    100% { width: 75%; }
+  }
+  .progress-value9 {
+    animation: linux 3s normal forwards;
+    box-shadow: 0 5px 20px -5px rgb(208, 255, 0);
+    border-radius: 100px;
+    background: rgb(208, 255, 1);
+    height: 15px;
+    width: 0;
+    
+  }
+  
+  @keyframes linux {
+    0% { width: 0; }
+    100% { width: 50%; }
+  }
+
   .quantidade{
       width: 470px;
       height: 70px;
@@ -553,6 +669,7 @@
       border-radius: 10px;
       
   }
+  
   .img{
       cursor: pointer;
       float: right;
@@ -576,3 +693,47 @@
  }
  
 
+ @media(max-width: 428px){
+  .first-avatar{
+    width: 500px;
+    margin: auto 0;
+    margin-left: -54px;
+    margin-top: 40px;
+  }
+#projects{
+  margin-bottom: 900px;
+  width: 95%;
+
+}
+#banSkill{
+  margin-top: 20px;
+  width: 95%;
+
+}
+.progress {
+  background: rgba(255,255,255,0.1);
+  justify-content: flex-start;
+  border-radius: 100px;
+  align-items: center;
+  position: absolute;
+  display: flex;
+  height: 20px;
+  width: 135px;
+  margin-top: 30px;
+  margin-left: 10px;
+  
+}
+#skills{
+  display: none !important;
+}
+#verProje{
+  display: none !important;
+
+}
+#newProj1{
+  display: flex !important;
+}
+.hidden{
+  display: flex !important;
+}
+ }
