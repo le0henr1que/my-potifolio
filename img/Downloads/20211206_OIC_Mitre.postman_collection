@@ -1,0 +1,175 @@
+{
+	"info": {
+		"_postman_id": "4da387e7-65ff-42c7-8c86-87d4a6376a80",
+		"name": "OIC",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "SAC2RN",
+			"item": [
+				{
+					"name": "Contact",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{OIC_pwd}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{OIC_user}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Basic dXNlci5hcGk6QWRpbjEyMzQ=",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id_cliente\" : \"9999\",\r\n    \"primeiro_nome\" : \"Nome\",\r\n    \"ultimo_nome\" : \"Teste\",\r\n    \"cpf\" : \"48265971256\",\r\n    \"emails\": [{\r\n        \"email\":\"email@email.com\",\r\n        \"id\": 0\r\n    },\r\n    {\r\n        \"email\":\"email2@email.com\",\r\n        \"id\": 1\r\n    }\r\n],\r\n    \"tipo_contato\": \"Cliente\",\r\n    \"logradouro\" : \"Rua X\",\r\n    \"numero_residencia\" : \"262\",\r\n    \"bairro\" : \"Pq das Orquidias\",\r\n    \"cidade\" : \"Guaxupe\",\r\n    \"cep\" : \"37800000\",\r\n    \"uf\" : \"MG\",\r\n    \"tipo_endereco\" : \"Residencial\",\r\n    \"n_contrato\" : \"12212\",\r\n    \"sigla\" : \"Sigle\",\r\n    \"aceita_receber_email\" : true,\r\n    \"aceita_receber_alerta\" : true,\r\n    \"aceita_receber_sms\" : true,\r\n    \"contratos\": [\r\n        {\r\n            \"numero_contrato\": \"1597\",\r\n            \"email\": \"mail@mail.com.br\",\r\n            \"empreendimento\": \"Torre ADIN\",\r\n            \"nome_cliente\": \"Teste\",\r\n            \"bloco\": \"15\",\r\n            \"numero_bloco\": \"15\",\r\n            \"numero_bloco_sac\": \"15\",\r\n            \"numero_empreendimento\": \"39845\",\r\n            \"numero_empreendimento_sac\": \"345-8\",\r\n            \"numero_filial\": \"952\",\r\n            \"numero_organizacao\": \"78\",\r\n            \"numero_tipologia\": \"15\",\r\n            \"tipologia\": \"Empresarial\",\r\n            \"numero_unidade\": \"7898\",\r\n            \"unidade\": \"Paulista\",\r\n            \"numero_unidade_sac\": \"3579\",\r\n            \"status_contrato\": \"Ativo\",\r\n            \"tel_celular\": \"11952526363\",\r\n            \"tel_residencial\": \"1129456878\",\r\n            \"tel_comercial\": \"3011952980\"\r\n        },\r\n        {\r\n            \"numero_contrato\": \"1111\",\r\n            \"email\": \"mail@mail.com.br\",\r\n            \"empreendimento\": \"Morumbi\",\r\n            \"nome_cliente\": \"Teste\",\r\n            \"bloco\": \"17\",\r\n            \"numero_bloco\": \"17\",\r\n            \"numero_bloco_sac\": \"17\",\r\n            \"numero_empreendimento\": \"39845\",\r\n            \"numero_empreendimento_sac\": \"345-8\",\r\n            \"numero_filial\": \"952\",\r\n            \"numero_organizacao\": \"78\",\r\n            \"numero_tipologia\": \"15\",\r\n            \"tipologia\": \"Apartamento\",\r\n            \"numero_unidade\": \"7898\",\r\n            \"unidade\": \"Morumbi\",\r\n            \"numero_unidade_sac\": \"3579\",\r\n            \"status_contrato\": \"Encerrado\",\r\n            \"tel_celular\": \"11952526363\",\r\n            \"tel_residencial\": \"1129456878\",\r\n            \"tel_comercial\": \"3011952980\"\r\n        },\r\n        {\r\n            \"numero_contrato\": \"1111\",\r\n            \"email\": \"mail3@mail.com.br\",\r\n            \"empreendimento\": \"Lorem\",\r\n            \"nome_cliente\": \"Fulano\",\r\n            \"bloco\": \"Meio\",\r\n            \"numero_bloco\": \"17\",\r\n            \"numero_bloco_sac\": \"17\",\r\n            \"numero_empreendimento\": \"39845\",\r\n            \"numero_empreendimento_sac\": \"345-8\",\r\n            \"numero_filial\": \"952\",\r\n            \"numero_organizacao\": \"78\",\r\n            \"numero_tipologia\": \"15\",\r\n            \"tipologia\": \"Apartamento\",\r\n            \"numero_unidade\": \"7898\",\r\n            \"unidade\": \"Sé\",\r\n            \"numero_unidade_sac\": \"3579\",\r\n            \"status_contrato\": \"Pendente\",\r\n            \"tel_celular\": \"21952526363\",\r\n            \"tel_residencial\": \"2129456878\",\r\n            \"tel_comercial\": \"3011952980\"\r\n        }\r\n    ]\r\n  }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{OIC}}/ic/api/integration/v1/flows/rest/RN_CONTACTS/1.0/rn/contacts",
+							"host": [
+								"{{OIC}}"
+							],
+							"path": [
+								"ic",
+								"api",
+								"integration",
+								"v1",
+								"flows",
+								"rest",
+								"RN_CONTACTS",
+								"1.0",
+								"rn",
+								"contacts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Incident",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{OIC_pwd}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{OIC_user}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"primaryContact\":\r\n         {\r\n         \r\n         \"cpf_cnpj\": \"48265971256\",\r\n         \"contato_id\": \"9999\" \r\n         },\r\n     \"subject\": \"2º Via de Boleto\",\r\n     \"departamento\":{\r\n         \"id\": 114,\r\n         \"name\":\"SAC\"\r\n     },\r\n     \"meio_comunicacao\": {\r\n         \"id\": 12,\r\n         \"name\":\"E-mail\"\r\n     },\r\n     \"codigo\": 27,\r\n     \"codigo_assunto\":48021,\r\n     \"tp_primeiro\": 21,\r\n     \"alerta_p\": 100,\r\n     \"ativo\": \"s\",\r\n     \"tp_conclusao\": 338,\r\n     \"alerta_c\": 338,\r\n     \"visivel\": \"s\",\r\n     \"id_contrato\": 1234,\r\n     \"id_protocolo\": 12345,\r\n     \"id_subassunto\": 123,\r\n     \"protocolo\": \"2487-6523\",\r\n     \"queue\": {\r\n         \"id\":2,\r\n         \"name\":\"Inicial - Entrada\"\r\n     },\r\n     \"statusWithType\":{\r\n         \"status\":{\r\n             \"id\":1,\r\n             \"lookupName\": \"Novo\"\r\n         }\r\n     }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{OIC}}/ic/api/integration/v1/flows/rest/RN_CREATE_INCIDENT/1.0/rn/incidents",
+							"host": [
+								"{{OIC}}"
+							],
+							"path": [
+								"ic",
+								"api",
+								"integration",
+								"v1",
+								"flows",
+								"rest",
+								"RN_CREATE_INCIDENT",
+								"1.0",
+								"rn",
+								"incidents"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "RN2SAC",
+			"item": [
+				{
+					"name": "Update Client",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{OIC_pwd}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{OIC_user}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"aceita_receber_email\": true,\r\n  \"tel_celular\": \"(11)99999-9999\",\r\n  \"aceita_receber_sms\": true,\r\n  \"tel_comercial\": \"(11)99999-9999\",\r\n  \"cliente_id\": \"9687\",\r\n  \"cpf_cnpj\": \"17084166840\",\r\n  \"email\": \"teste@teste.com.br\",\r\n  \"tel_residencial\": \"(11)99999-9999\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{OIC}}/ic/api/integration/v1/flows/rest/SAC_UPDATE_CLIENT/1.0/sac/clients",
+							"host": [
+								"{{OIC}}"
+							],
+							"path": [
+								"ic",
+								"api",
+								"integration",
+								"v1",
+								"flows",
+								"rest",
+								"SAC_UPDATE_CLIENT",
+								"1.0",
+								"sac",
+								"clients"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
