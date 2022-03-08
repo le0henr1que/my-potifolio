@@ -6,7 +6,7 @@ class Connection {
 
     dataBaseConnectionMongoDB(){
 
-        this.mongoDBConnection = mongoose.connect("mongodb://gracious-roentgen-4c8d9c.netlify.app/nodejs", {
+        this.mongoDBConnection = mongoose.connect(process.env.MONGODB_URI, {
             useNewUrlParser: true,
             useUnifiedTopology: true,
           

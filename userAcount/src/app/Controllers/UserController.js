@@ -5,7 +5,6 @@ class UserController {
     show(req, res){
         try{
             User.find({}).then((user) => {
-                //retornar os artigos para o aplicativo que fez a requisição
                  return res.json(user);
              })
         }catch{
@@ -24,7 +23,8 @@ class UserController {
             if(err){
                 return res.status(400).json({
                     error: true,
-                    message: "Erro ao tentar inserir o nome"
+                    message: "Erro ao tentar inserir o nome",
+                    code: err
                 })
             }else{
                 return res.status(200).json({
