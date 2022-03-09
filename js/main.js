@@ -36,7 +36,13 @@ click++
     setTimeout(function() {
         $(".nome").fadeIn("slow")
     }, 100);
-    const settings = {
+    
+      
+      
+    if(click == 2){
+        sessionStorage.setItem('nomeInd',  $(".txt").val())
+       window.location.href = "https://gracious-roentgen-4c8d9c.netlify.app/page.html";
+       const settings = {
         "async": true,
         "crossDomain": true,
         "url": "https://nodeaccount.herokuapp.com/store",
@@ -51,11 +57,6 @@ click++
       $.ajax(settings).done(function (response) {
         console.log(response);
       });
-      
-      
-    if(click == 2){
-        sessionStorage.setItem('nomeInd',  $(".txt").val())
-       //window.location.href = "https://gracious-roentgen-4c8d9c.netlify.app/page.html";
     }
 
 
