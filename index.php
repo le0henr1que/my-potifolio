@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
   <link rel="stylesheet" type="text/css" href="css/css.css"/>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="js/main.js"></script>
@@ -46,13 +48,51 @@
       <div class="cor cor4 " id="4BDBD5" style="background: #4BDBD5;"></div>
       <div class="cor cor5 " id="FF6E1A"  style="background: #FF6E1A;"></div>
       <div class="nome">
-        <p style="font-family: sans-serif; color:rgb(82, 80, 80); font-weight: 700;">Seu Nome</p>
-        <input class="txt" type="text">
-      </div>
-      <div class="nb" style="margin: 10px;">
-        <p style="float:right; cursor:pointer;" id="next">Next</p>
-        <p style="float:left; cursor:pointer;" id="back">Back</p>
+        <form method="post">
+          <p style="font-family: sans-serif; color:rgb(82, 80, 80); font-weight: 700;">Seu Nome</p>
+          <input name="nome" class="txt" type="text">
+        </div>
+        <div class="nb" style="margin: 10px;">
+          <button type="submit" name="ir" class="btn btn-primary" style="float:right; cursor:pointer;" id="next">Next</button>
+          <p style="float:left; cursor:pointer;" id="back">Back</p>
+      </form>
+      <?php  
+      if(isset($_POST["ir"])){
 
+        $name = $_POST['nome'];
+
+        $curl = curl_init();
+        
+        curl_setopt_array($curl, [
+          CURLOPT_URL => "https://nodeaccount.herokuapp.com/store",
+          CURLOPT_RETURNTRANSFER => true,
+          CURLOPT_ENCODING => "",
+          CURLOPT_MAXREDIRS => 10,
+          CURLOPT_TIMEOUT => 30,
+          CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+          CURLOPT_CUSTOMREQUEST => "POST",
+          CURLOPT_POSTFIELDS => "{\n\t\"name\":\"".$name."\"\n}",
+          CURLOPT_HTTPHEADER => [
+            "Content-Type: application/json"
+          ],
+        ]);
+
+        $response = curl_exec($curl);
+        $err = curl_error($curl);
+
+        curl_close($curl);
+
+        if ($err) {
+          echo "cURL Error #:" . $err;
+        } else {
+          ?><script> 
+          window.location.href = "https://gracious-roentgen-4c8d9c.netlify.app/page.html";
+        </script><?php
+        }
+       
+      }
+      
+      ?>
       </div>
     </div>
   </div>
