@@ -40,24 +40,9 @@ click++
       
       
     if(click == 2){
-        const settings = {
-            "async": true,
-            "crossDomain": true,
-            "url": "https://nodeaccount.herokuapp.com/store",
-            "method": "POST",
-            "headers": {
-              "cookie": "connect.sid=s%253AtEZCjKsvxv7xjXbWuWN_sGflpiCdymss.gpjuiEWtCwPnCZm9s9iZYIBqFljFvoXiEjifccuIPMU",
-              "Content-Type": "application/json"
-            },
-            "processData": false,
-            "data": "{\n\t\"name\":\""+$(".txt").val()+"\"\n}"
-          };
-          
-          $.ajax(settings).done(function (response) {
-            console.log(response);
+       
             sessionStorage.setItem('nomeInd',  $(".txt").val())
-            //window.location.href = "https://gracious-roentgen-4c8d9c.netlify.app/page.html";
-          });
+            window.location.href = "https://gracious-roentgen-4c8d9c.netlify.app/page.html";
       
     
     }
