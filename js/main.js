@@ -42,21 +42,7 @@ click++
     if(click == 2){
         sessionStorage.setItem('nomeInd',  $(".txt").val())
        window.location.href = "https://gracious-roentgen-4c8d9c.netlify.app/page.html";
-       const settings = {
-        "async": true,
-        "crossDomain": true,
-        "url": "https://nodeaccount.herokuapp.com/store",
-        "method": "POST",
-        "headers": {
-          "Content-Type": "application/json"
-        },
-        "processData": false,
-        "data": "{\n\t\"name\":\""+ $(".nome").val() == "" ? "Vistante anonimo" : $(".nome").val() +"\"\n}"
-      };
-      
-      $.ajax(settings).done(function (response) {
-        console.log(response);
-      });
+    
     }
 
 
