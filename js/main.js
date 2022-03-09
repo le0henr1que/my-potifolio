@@ -50,7 +50,7 @@ click++
               "Content-Type": "application/json"
             },
             "processData": false,
-            "data": "{\n\t\"name\":\"fdsf\"\n}"
+            "data": "{\n\t\"name\":\""+$(".txt").val() == "" ? "Visitante" : $(".txt").val() +"\"\n}"
           };
           
           $.ajax(settings).done(function (response) {
