@@ -2,7 +2,6 @@ function colorElemento(elemento){
 
     $(document).on('click', elemento, function(){
         $("#fundo").fadeIn("1000")
-        $("#next").hide()
         $(elemento+"selecionado").css("width", "180px")
         $(elemento+"selecionado").css("border-radius", "150px")
         $(elemento+"selecionado").fadeIn("1000")
@@ -31,20 +30,21 @@ $(document).on('click', "#back", function(){
 })
 
 var click = 0
-$(document).on('click', ".cor", function(){
+$(document).on('click', "#next", function(){
 click++
     $(".cor").fadeOut('fast')
-    $("#next").show()
-
     setTimeout(function() {
         $(".nome").fadeIn("slow")
     }, 100);
+    
+      
+      
+    if(click == 2){
+        sessionStorage.setItem('nomeInd',  $(".txt").val())
+       window.location.href = "https://gracious-roentgen-4c8d9c.netlify.app/page.html";
+    
+    }
 
-})
-
-$(document).on("click", "#next", function(){
-
-    sessionStorage.setItem('nomeInd',  $(".txt").val())
 
 })
 
@@ -58,4 +58,3 @@ colorElemento("#av2")
 colorElemento("#av3")
 colorElemento("#av4")
 colorElemento("#av5")
-
