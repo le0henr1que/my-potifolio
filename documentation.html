@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
+<link href="css/cssDocumentation.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documentation</title>
+</head>
+<body>
+   
+        <div class="container">
+        <ul class="nav nav-pills flex-column mb-auto">
+             <li class="nav-item">
+                <img src="img/icong 1.png" width="120" height="120" class="d-inline-block align-text-top" align="center">
+            </li>
+            <li class="nav-item">
+               <hr style="color:white;">
+            </li>
+
+
+            <li class="nav-item">
+                <a href="#" class="nav-link  text-white active" aria-current="page" id="liBtn1" onclick="btn1()">
+                    O que é o SubLayer Defender?
+                </a>
+            </li>
+            <li>
+                <a href="#instalacao" class="nav-link text-white" id="liBtn2" onclick="btn2()">
+              
+                    Requisitos
+                </a>
+            </li>
+            <li>
+                <a href="#" class="nav-link text-white" id="liBtn3" onclick="btn3()">
+               
+                    Como usar
+                </a>
+            </li>
+         
+            <li>
+                <a href="#" class="nav-link text-white">
+                <svg class="bi me-2" width="16" height="16"><use xlink:href="#people-circle"></use></svg>
+                
+                </a>
+            </li>
+            </ul>
+        </div>
+           
+    </div>  
+    <div class="cont1" style="display:inline-block; margin-top:50px;">
+        <h3>O que é o SubLayer Defender?</h3>
+        <div itemscope="" itemprop="acceptedAnswer" itemtype="https://schema.org/Answer" style="margin:20px;">
+        <p>Sublayer Defender é um programa que visa auxiliar e facilitar a busca de padrões e artefatos maliciosos em sistemas com métodos automatizados e organizados, auxiliando também na confecção de relatórios no setor de análise de malware, com isso a aplicação foi separada conforme o nível de conhecimento do usuário.</p> <br>
+        <p>Foi utilizado como principal característica para funcionamento da ferramenta o conceito de Sandbox, que segundo o site “<a href="https://gatefy.com/pt-br/blog/sandbox-o-que-e-e-como-funciona/">gatefy.com/pt-br/blog/sandbox-o-que-e-e-como-funciona/”</a> se trata de um ambiente virtual isolado que não depende de seu equipamento e rede e por tal motivo é uma área de testes isolada. </p> <br>
+        <p>Além do conceito de Sandbox, foi utilizado também as regras Yara, ela foi a principal ferramenta para identificar e classificar os padrões maliciosos, conforme o “yara.readthedocs.io” apenas as regras em si não oferecem um tratamento para tal padrão, apenas detecta sendo necessário após a identificação, um tratamento e ação conforme o padrão identificado, é possível criar regras utilizando hashs, binários, padrões hexadecimais, clean text, base 64 e também famílias de malwares. </p> 
+        <p>Esses documentos operam sob a suposição de que o leitor está familiarizado com:</p>
+                <ul>
+                    <li>XAMP</li>
+                    <li>Regras Yara</li>
+                    <li>Shell Exec</li>
+                </ul>
+        </div>
+        <h3>Requisitos</h3>
+        <div id="instalacao" itemscope="" itemprop="acceptedAnswer" itemtype="https://schema.org/Answer" style="margin:20px;">
+            <p>Para usar SubLayer Defender é preciso instalar o pacote 
+
+        </div>
+    </div>
+    <script>
+        function btn1()
+        {
+            console.log("teste");
+           //document.getElementById('liBtn1').style.backgroundColor = "red";
+           document.getElementById("liBtn1").classList.add('active');
+         
+           document.getElementById("liBtn2").classList.remove('active');
+           document.getElementById("liBtn3").classList.remove('active');
+        }
+        function btn2()
+        {
+            console.log("teste");
+           //document.getElementById('liBtn1').style.backgroundColor = "red";
+           document.getElementById("liBtn2").classList.add('active');
+          
+           document.getElementById("liBtn1").classList.remove('active');
+           document.getElementById("liBtn3").classList.remove('active');
+        }
+        function btn3()
+        {
+            console.log("teste");
+           //document.getElementById('liBtn1').style.backgroundColor = "red";
+           document.getElementById("liBtn3").classList.add('active');
+           document.getElementById("liBtn1").classList.remove('active');
+           document.getElementById("liBtn2").classList.remove('active')
+        }
+    </script>
+</body>
+</html>
